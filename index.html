@@ -2,98 +2,353 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rhythm Gilhotra - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhythm Gilhotra – Portfolio</title>
+  <!-- TailwindCSS CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <!-- Icons (Heroicons) -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- ScrollReveal for simple animations -->
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+  <!-- LinkedIn Profile Badge Script -->
+  <script
+    src="https://platform.linkedin.com/badges/js/profile.js"
+    async
+    defer
+  ></script>
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 800px; line-height: 1.6; }
-    h1, h2 { color: #2c3e50; }
-    a { color: #2980b9; text-decoration: none; }
-    section { margin-bottom: 2rem; }
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>Rhythm Gilhotra</h1>
-    <p><strong>Senior Software Engineer (Data Systems)</strong></p>
-    <p>📍 Gurgaon, Haryana | <a href="mailto:rhythm.gilhotra@gmail.com">rhythm.gilhotra@gmail.com</a></p>
-    <p>
-      🔗 <a href="https://www.linkedin.com/in/rhythmgilhotra" target="_blank">LinkedIn</a> |
-      💻 <a href="https://github.com/rhythmgilhotra" target="_blank">GitHub</a>
-    </p>
+<body class="bg-zinc-50 text-zinc-800 font-sans">
+  <!-- ===== NAVBAR ===== -->
+  <header
+    class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/70 border-b border-zinc-200"
+  >
+    <div
+      class="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-8"
+    >
+      <a href="#home" class="text-lg font-semibold">Rhythm Gilhotra</a>
+      <!-- Desktop links -->
+      <nav class="hidden md:flex gap-6">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#resume" class="hover:text-blue-600">Resume</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <!-- Mobile menu button -->
+      <button
+        id="menuBtn"
+        class="md:hidden rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <!-- Mobile links -->
+    <nav
+      id="mobileMenu"
+      class="md:hidden hidden flex-col gap-2 p-4 border-t border-zinc-200 bg-white"
+    >
+      <a href="#about" class="py-1">About</a>
+      <a href="#experience" class="py-1">Experience</a>
+      <a href="#projects" class="py-1">Projects</a>
+      <a href="#skills" class="py-1">Skills</a>
+      <a href="#resume" class="py-1">Resume</a>
+      <a href="#contact" class="py-1">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm a Senior Software Engineer experienced in building scalable, ML-powered data platforms and real-time decision engines.
-      My work focuses on high-volume data ingestion, ETL/ELT, and streaming architectures using tools like Airflow, GCP, BigQuery, and Kafka.
+  <!-- ===== HERO ===== -->
+  <section
+    id="home"
+    class="sr pt-24 pb-16 md:pt-32 md:pb-24 text-center bg-gradient-to-b from-blue-50 to-transparent"
+  >
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Hi, I'm Rhythm – <span class="text-blue-600">Engineering scalable data
+        platforms</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-6">
+        Senior Software Engineer specialising in ML‑powered data pipelines,
+        real‑time decision engines, and cloud‑native architectures.
+      </p>
+      <div class="flex justify-center gap-4">
+        <a
+          href="https://github.com/rhythmgilhotra"
+          target="_blank"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded border border-zinc-300 hover:bg-zinc-100"
+        >
+          <i data-feather="github"></i> GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rhythmgilhotra/"
+          target="_blank"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-blue-600 text-white hover:bg-blue-700"
+        >
+          <i data-feather="linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="sr max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="mb-4">
+      I'm a Senior Software Engineer experienced in building scalable,
+      ML‑powered data platforms and real‑time decision engines. My work focuses
+      on high‑volume data ingestion, ETL/ELT, and streaming architectures
+      leveraging Airflow, GCP, BigQuery, Kafka, and Python. Passionate about
+      system design, data infrastructure, and automation, I aim to drive
+      measurable business outcomes through resilient backend systems.
     </p>
-    <p>
-      Passionate about system design, data infrastructure, and automation, I aim to drive measurable business outcomes through resilient backend systems and data pipelines.
+    <!-- LinkedIn embedded badge -->
+    <div
+      class="badge-base LI-profile-badge"
+      data-locale="en_US"
+      data-size="medium"
+      data-theme="light"
+      data-type="VERTICAL"
+      data-vanity="rhythmgilhotra"
+      data-version="v1"
+    ></div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="sr bg-zinc-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-8">Experience</h2>
+
+      <!-- AmEx -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold">American Express</h3>
+        <p class="italic text-sm mb-2">Senior Software Engineer • Jul 2022 – Present</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            Architected a scalable Airflow‑based ETL framework powering 20+
+            pipelines across fraud, credit, and risk analytics.
+          </li>
+          <li>
+            Optimised a GCP BigQuery pipeline ingesting 30M+ rows/day, reducing
+            processing latency by 75%.
+          </li>
+          <li>
+            Led design of modular components for batch & streaming analytics
+            integrating Kafka and BigQuery.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Data Sciencewiz -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold">Data Sciencewiz</h3>
+        <p class="italic text-sm mb-2">Data Scientist • Jun 2021 – Jun 2022</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            Designed ETL pipelines for marketing analytics using Python, SQL,
+            MongoDB.
+          </li>
+          <li>
+            Built and deployed predictive ML models for user segmentation and
+            churn forecasting.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Qween Intern -->
+      <div>
+        <h3 class="text-xl font-semibold">Qween</h3>
+        <p class="italic text-sm mb-2">Data Science Intern • Mar 2021 – May 2021</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            Performed legacy data analysis and proposed a scalable cloud‑native
+            redesign.
+          </li>
+          <li>
+            Built profiling & validation tools improving reporting accuracy by
+            30%.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="sr max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold mb-8">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- MDS -->
+      <div class="p-6 border rounded-lg bg-white shadow-sm">
+        <h3 class="font-bold text-lg mb-2">Microtransaction Detection System</h3>
+        <p class="mb-4 text-sm">
+          Python‑based system for detecting fraudulent microtransactions in
+          real‑time using feature stores and anomaly detection.
+        </p>
+        <a
+          href="#"
+          class="text-blue-600 hover:underline text-sm"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
+      <!-- Transactions Ingestion -->
+      <div class="p-6 border rounded-lg bg-white shadow-sm">
+        <h3 class="font-bold text-lg mb-2">Transactions Ingestion Pipeline</h3>
+        <p class="mb-4 text-sm">
+          Resilient data pipeline (Kafka → Airflow → BigQuery) with retry logic
+          and SLA monitoring.
+        </p>
+        <a
+          href="#"
+          class="text-blue-600 hover:underline text-sm"
+          target="_blank"
+          >View Code</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="sr bg-zinc-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-8">Skills</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm"
+          >Python</span
+        >
+        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm"
+          >SQL</span
+        >
+        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm"
+          >Airflow</span
+        >
+        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm"
+          >GCP</span
+        >
+        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm"
+          >Kafka</span
+        >
+        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm"
+          >Docker</span
+        >
+        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm"
+          >System Design</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME ===== -->
+  <section id="resume" class="sr max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold mb-4">Resume</h2>
+    <p class="mb-6">
+      Download my latest resume or view it directly in the browser.
+    </p>
+    <div class="flex gap-4">
+      <a
+        href="resume.pdf"
+        target="_blank"
+        class="inline-block px-5 py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >Download PDF</a
+      >
+      <a
+        href="resume.pdf#view=fitH"
+        target="_blank"
+        class="inline-block px-5 py-3 border border-blue-600 text-blue-600 rounded hover:bg-blue-50"
+        >View Online</a
+      >
+    </div>
+    <p class="text-xs mt-2">
+      *Remember to upload <code>resume.pdf</code> to your repository root.
     </p>
   </section>
 
-  <section>
-    <h2>Experience</h2>
-
-    <h3>American Express – Senior Software Engineer (Jul 2022 – Present)</h3>
-    <ul>
-      <li>Architected a scalable Airflow-based ETL/ELT framework powering 20+ pipelines across fraud, credit, and risk analytics.</li>
-      <li>Optimized a high-volume GCP data pipeline ingesting over 30M rows/day, reducing latency by 75%.</li>
-      <li>Led design of modular components for batch and streaming analytics, integrating Kafka and BigQuery.</li>
-      <li>Mentored junior engineers in system design and data modeling practices.</li>
-    </ul>
-
-    <h3>Data Sciencewiz – Data Scientist (Jun 2021 – Jun 2022)</h3>
-    <ul>
-      <li>Designed ETL pipelines for marketing and user behavior analysis using Python, SQL, and MongoDB.</li>
-      <li>Built and deployed predictive ML models for user segmentation and churn forecasting.</li>
-      <li>Collaborated with cross-functional teams to build analytics dashboards in Streamlit and Power BI.</li>
-    </ul>
-
-    <h3>Qween – Data Science Intern (Mar 2021 – May 2021)</h3>
-    <ul>
-      <li>Performed legacy data analysis and proposed scalable cloud-native architecture redesign.</li>
-      <li>Built data profiling and validation tools that improved reporting accuracy by 30%.</li>
-    </ul>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="sr bg-zinc-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-8">Get in Touch</h2>
+      <form
+        action="https://formspree.io/f/yourFormID" <!-- Replace with your Formspree ID -->
+        method="POST"
+        class="grid gap-4 md:grid-cols-2"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+          class="col-span-2 px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          class="col-span-2 md:col-span-1 px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          required
+          class="col-span-2 md:col-span-1 px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Message"
+          required
+          class="col-span-2 px-4 py-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+        <button
+          type="submit"
+          class="col-span-2 w-full md:w-auto md:justify-self-start px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
   </section>
 
-  <section>
-    <h2>Education</h2>
-    <p><strong>Thapar Institute of Engineering and Technology</strong> — B.E., Computer Engineering (2017 – 2021)</p>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Google Cloud Professional Data Engineer</li>
-      <li>LinkedIn Skill Assessments: Python (Top 5%), SQL, ETL, System Design</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-    <h3>Microtransaction Detection System (MDS)</h3>
-    <ul>
-      <li>Built Python-based system for detecting fraudulent microtransactions in real-time using feature-store + anomaly detection.</li>
-    </ul>
-
-    <h3>Data Pipeline for Transactions Ingestion</h3>
-    <ul>
-      <li>Designed resilient data ingestion pipeline (Kafka → Airflow → BigQuery) with retry mechanisms and SLA monitoring.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <p>Python, SQL, Airflow, GCP (BigQuery, Cloud Storage), Kafka, Docker, Git, System Design</p>
-  </section>
-
-  <footer>
-    <p>© Rhythm Gilhotra – 2025 | Built with ❤️ on GitHub Pages</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="text-center py-6 text-sm">
+    © <span id="year"></span> Rhythm Gilhotra • Built with
+    <a href="https://tailwindcss.com/" class="text-blue-600 hover:underline"
+      >Tailwind CSS</a
+    > & GitHub Pages
   </footer>
 
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Feather icons
+    feather.replace();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // ScrollReveal animations
+    ScrollReveal().reveal(".sr", {
+      distance: "30px",
+      duration: 800,
+      easing: "ease-out",
+      origin: "bottom",
+      interval: 200,
+    });
+
+    // Dynamic year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
